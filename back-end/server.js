@@ -42,9 +42,9 @@ app.use("/auth", authRouter);
 app.use("/quiz", quizRouter);
 app.use("/poll", pollRouter);
 
-app.use(express.static(path.join(__dirname, '/front-end/dist')));
+app.use(express.static(path.join(__dirname, './front-end/dist')));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, 'front-end', 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, './front-end', 'dist', 'index.html'));
 })
 
 app.use((error, req, res, next) => {
