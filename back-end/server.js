@@ -7,11 +7,8 @@ import authRouter from "./routes/auth.route.js";
 import quizRouter from "./routes/quiz.route.js";
 import pollRouter from "./routes/poll.route.js";
 import path from "path";
-import fs from "fs";
 
 dotenv.config();
-
-const __dirname = path.resolve();
 
 const app = express();
 
@@ -42,24 +39,6 @@ mongoose
 app.use("/auth", authRouter);
 app.use("/quiz", quizRouter);
 app.use("/poll", pollRouter);
-
-const frontEndPath = path.join(__dirname, "../front-end/dist");
-if (fs.existsSync(frontEndPath)) {
-  console.log(`Serving static files from ${frontEndPath}`);
-} else {
-  console.error(`Static files directory ${frontEndPath} does not exist`);
-}
-
-app.use(express.static(frontEndPath));
-app.get("*", (req, res) => {
-  const indexPath = path.join(frontEndPath, "index.html");
-  if (fs.existsSync(indexPath)) {
-    res.sendFile(indexPath);
-  } else {
-    console.error(`Index file ${indexPath} does not exist`);
-    res.status(404).send("Index file not found");
-  }
-});
 
 app.use((error, req, res, next) => {
   const statusCode = error.statusCode || 500;
