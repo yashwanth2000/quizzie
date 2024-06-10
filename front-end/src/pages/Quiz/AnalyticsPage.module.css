@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: #ededed;
+  min-height: 100vh;
+  width: calc(100% - 11.25rem);
+  margin-left: 11.25rem;
+}
+
+.heading {
+  color: #5076ff;
+  font-family: "Poppins";
+  font-size: 3.125rem;
+  font-weight: 600;
+  line-height: 4.688rem;
+  text-align: center;
+  width: 21.125rem;
+  height: 4.688rem;
+  margin-bottom: 3rem;
+}

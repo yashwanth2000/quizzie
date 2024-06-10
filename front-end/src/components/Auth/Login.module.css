@@ -1,0 +1,66 @@
+:root {
+  font-size: 16px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.labelInputPair {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 60%;
+}
+
+.formLabel {
+  font-family: "Poppins";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: #474444;
+  width: 20%;
+  margin-right: 2rem;
+}
+
+.formInput {
+  flex: 1;
+  height: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  background: #f4f4f4;
+  outline: none;
+  border-radius: 0.625rem 0.625rem 0 0;
+  padding: 8px;
+}
+
+.formInput.error {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.logInBtn {
+  background: #a9bcff;
+  color: #474444;
+  font-family: "Poppins";
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.875rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  width: 12.5rem;
+  height: 2.5rem;
+  border: none;
+  margin-top: 1.25rem;
+  width: 18rem;
+  cursor: pointer;
+}

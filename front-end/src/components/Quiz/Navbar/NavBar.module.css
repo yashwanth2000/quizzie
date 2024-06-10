@@ -1,0 +1,86 @@
+:root {
+  font-size: 16px;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 12rem;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  padding: 1.25rem;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: "Jomhuria";
+  font-size: 5rem;
+  font-weight: 400;
+  color: #474444;
+  text-align: center;
+  letter-spacing: 0.125rem;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.dashboard,
+.analytics,
+.createQuiz {
+  color: #474444;
+  width: 6.25rem;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Poppins";
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+
+.isActive {
+  border-radius: 0.625rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 0.875rem 0px #0000001f;
+  width: 12rem;
+  height: 2rem;
+}
+
+.logout {
+  position: relative;
+  color: #474444;
+  width: 5rem;
+  height: 1.875rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Poppins";
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.logout::before {
+  content: "";
+  display: block;
+  width: 9.375rem;
+  height: 0.125rem;
+  background-color: #000;
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

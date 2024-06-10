@@ -1,0 +1,102 @@
+.modalBackdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.quizName {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.quizName input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 25px 0px #00000026;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.quizType {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.quizType label {
+  margin-right: 60px;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 400;
+  color: #9f9f9f;
+}
+
+.quizTypeContainer {
+  display: flex;
+  gap: 40px;
+  width: 60%;
+}
+
+.quizTypeButton {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.active {
+  background-color: #60b84b;
+  color: white;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cancelButton,
+.continueButton {
+  width: 140px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Poppins";
+}
+
+.cancelButton {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px 0px #00000040;
+}
+
+.continueButton {
+  background-color: #60b84b;
+  color: white;
+}
+
+.continueButton:hover {
+  background-color: #45a049;
+}

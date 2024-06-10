@@ -1,0 +1,194 @@
+.quizContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.quizHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.quizProgress {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.quizContent {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.quizQuestion {
+  margin: 20px 0;
+}
+
+.questionText {
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  color: #474444;
+  margin-bottom: 40px;
+}
+
+.optionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.optionRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.optionCard {
+  border: 3px solid transparent;
+  border-radius: 8px;
+  margin: 20px;
+  cursor: pointer;
+  min-width: 250px;
+  min-height: 100px;
+  background-color: #f0f0f0;
+  transition: border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.optionCard:hover {
+  border-color: #007bff;
+}
+
+.selected {
+  border-color: #007bff !important;
+}
+
+.optionText {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.optionImage {
+  max-width: 100%;
+  height: auto;
+  width: 240px;
+  height: 100px;
+  border-radius: 5px;
+  margin-top: 2px;
+}
+
+.optionImageUrl {
+  width: 240px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.imageOption img {
+  object-fit: fill;
+}
+
+.loading {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quizNavigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navButton {
+  padding: 10px 20px;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 45px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  flex: 1;
+  max-width: 200px;
+}
+
+.nextButton {
+  background-color: #60b84b;
+}
+
+.submitButton {
+  background-color: #60b84b;
+}
+
+.completedScreen {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.completedScreen h1 {
+  font-size: 80px;
+  font-weight: 700;
+  color: #474444;
+  word-break: normal;
+}
+
+@media (max-width: 768px) {
+  .quizHeader,
+  .quizContent {
+    padding: 10px;
+  }
+
+  .questionText {
+    font-size: 28px;
+  }
+
+  .optionCard {
+    margin: 10px;
+    min-width: 150px;
+    min-height: 80px;
+  }
+
+  .optionText {
+    font-size: 18px;
+  }
+
+  .optionImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .navButton {
+    font-size: 18px;
+    padding: 8px 16px;
+    line-height: 30px;
+  }
+
+  .completedScreen {
+    padding: 10px;
+  }
+
+  .completedScreen h1 {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,244 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.maxQuestionsText {
+  margin-left: auto;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #474444;
+}
+
+.roundNumber {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 0px #00000026;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+}
+
+.cancelIcon {
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  top: -8px;
+  right: -14px;
+  color: #474444;
+}
+
+.plusIcon {
+  cursor: pointer;
+  color: #969696;
+  width: 16px;
+  height: 16px;
+}
+
+.header span {
+  margin-right: 15px;
+}
+
+.pollQuestion input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 25px 0px #00000026;
+  background-color: #ffffff;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  color: #9f9f9f;
+}
+
+.optionType {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.optionType span {
+  margin-right: 20px;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  width: 122px;
+  height: 30px;
+  color: #9f9f9f;
+}
+
+.optionType div {
+  display: flex;
+  align-items: center;
+}
+
+.optionTypeContainer {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+  color: #9f9f9f;
+}
+
+.optionTypeContainer input[type="radio"] {
+  accent-color: #353434;
+  margin-right: 5px;
+}
+
+.optionTypeLabel {
+  margin: 8px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.option input {
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.optionInput {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 25px 0px #00000026;
+  width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  color: #9f9f9f;
+  border: none;
+  outline: none;
+}
+
+.optionInput.selected {
+  background-color: #60b84b;
+  color: #ffffff;
+  box-shadow: 0px 0px 25px 0px #00000026;
+  border-radius: 10px;
+}
+
+.optionInput.selected::placeholder {
+  color: #ffffff;
+}
+
+.optionInputContainer input[type="radio"] {
+  border: 7px solid #ffffff;
+  border-radius: 50%;
+}
+.optionInputContainer input[type="radio"]:checked {
+  accent-color: #60b84b;
+}
+
+.option img {
+  cursor: pointer;
+}
+.addOptionButtonContainer {
+  margin-top: 1.5rem;
+}
+.addOptionButton {
+  width: 150px;
+  height: 30px;
+  background-color: #ffff;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: #9f9f9f;
+  border: none;
+  box-shadow: 0px 0px 25px 0px #00000026;
+  margin-bottom: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cancelButton,
+.createPollButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #474444;
+  margin-right: 10px;
+  box-shadow: 0px 0px 15px 0px #00000040;
+}
+
+.createPollButton {
+  background-color: #60b84b;
+  color: white;
+}
+
+.createPollButton:hover {
+  background-color: #45a049;
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1.3rem;
+}
