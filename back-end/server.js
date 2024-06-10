@@ -42,8 +42,8 @@ app.use("/auth", authRouter);
 app.use("/quiz", quizRouter);
 app.use("/poll", pollRouter);
 
-const frontEndPath = path.join(__dirname, "../front-end/dist");
 
+const frontEndPath = path.join(__dirname, "../front-end/dist");
 app.use(express.static(frontEndPath));
 
 app.get("*", (req, res) => {
@@ -52,10 +52,12 @@ app.get("*", (req, res) => {
     req.originalUrl.startsWith("/quiz") ||
     req.originalUrl.startsWith("/poll")
   ) {
-    return res.status(404).send("Not Found");
+    return res.status(404).send("API Route Not Found");
   }
+
   res.sendFile(path.join(frontEndPath, "index.html"));
 });
+
 
 app.use((error, req, res, next) => {
   const statusCode = error.statusCode || 500;
