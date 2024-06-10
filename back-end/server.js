@@ -10,6 +10,8 @@ import path from "path";
 
 dotenv.config();
 
+const __dirname = path.resolve();
+
 const app = express();
 
 app.use(express.json());
@@ -39,6 +41,21 @@ mongoose
 app.use("/auth", authRouter);
 app.use("/quiz", quizRouter);
 app.use("/poll", pollRouter);
+
+const frontEndPath = path.join(__dirname, "../front-end/dist");
+
+app.use(express.static(frontEndPath));
+
+app.get("*", (req, res) => {
+  if (
+    req.originalUrl.startsWith("/auth") ||
+    req.originalUrl.startsWith("/quiz") ||
+    req.originalUrl.startsWith("/poll")
+  ) {
+    return res.status(404).send("Not Found");
+  }
+  res.sendFile(path.join(frontEndPath, "index.html"));
+});
 
 app.use((error, req, res, next) => {
   const statusCode = error.statusCode || 500;
