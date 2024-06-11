@@ -16,6 +16,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
+
+console.log("CLIENT_URL:", process.env.CLIENT_URL);
+
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
@@ -38,23 +41,41 @@ mongoose
     console.error(err);
   });
 
-app.use("/auth", authRouter);
-app.use("/quiz", quizRouter);
-app.use("/poll", pollRouter);
+app.use("/auth", (req, res, next) => {
+  console.log("Auth route hit:", req.originalUrl); 
+  authRouter(req, res, next);
+});
+
+app.use("/quiz", (req, res, next) => {
+  console.log("Quiz route hit:", req.originalUrl); 
+  quizRouter(req, res, next);
+});
+
+app.use("/poll", (req, res, next) => {
+  console.log("Poll route hit:", req.originalUrl);
+  pollRouter(req, res, next);
+});
 
 
 const frontEndPath = path.join(__dirname, "../front-end/dist");
+console.log("Front-end path:", frontEndPath); 
+
 app.use(express.static(frontEndPath));
 
+
 app.get("*", (req, res) => {
+  console.log("Request URL:", req.originalUrl); 
+
   if (
     req.originalUrl.startsWith("/auth") ||
     req.originalUrl.startsWith("/quiz") ||
     req.originalUrl.startsWith("/poll")
   ) {
+    console.log("API Route Not Found");
     return res.status(404).send("API Route Not Found");
   }
 
+  console.log("Serving index.html"); 
   res.sendFile(path.join(frontEndPath, "index.html"));
 });
 
