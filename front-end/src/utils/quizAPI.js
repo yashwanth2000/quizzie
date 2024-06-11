@@ -1,5 +1,4 @@
 const backendUrl = import.meta.env.VITE_SERVER_URL;
-console.log(backendUrl);
 const createQuiz = async (quizData) => {
   try {
     const res = await fetch(`${backendUrl}/quiz/create-quiz`, {
