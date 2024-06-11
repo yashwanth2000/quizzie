@@ -48,27 +48,8 @@ const frontEndPath = path.join(__dirname, "../front-end/dist");
 app.use(express.static(frontEndPath));
 
 app.get("*", (req, res) => {
-  console.log("Request URL:", req.originalUrl);
-
-  const isQuizViewerRoute =
-    req.originalUrl.startsWith("/quiz/") &&
-    !req.originalUrl.startsWith("/quiz?");
-  const isPollViewerRoute =
-    req.originalUrl.startsWith("/poll/") &&
-    !req.originalUrl.startsWith("/poll?");
-
-  if (
-    req.originalUrl.startsWith("/auth") ||
-    (req.originalUrl.startsWith("/quiz") && !isQuizViewerRoute) ||
-    (req.originalUrl.startsWith("/poll") && !isPollViewerRoute)
-  ) {
-    console.log("API Route Not Found");
-    return res.status(404).send("API Route Not Found");
-  }
-
-  console.log("Serving index.html");
   res.sendFile(path.join(frontEndPath, "index.html"));
-});
+})
 
 app.use((error, req, res, next) => {
   const statusCode = error.statusCode || 500;
