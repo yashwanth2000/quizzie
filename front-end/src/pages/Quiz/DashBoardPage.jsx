@@ -46,6 +46,11 @@ export default function DashBoardPage() {
       <NavBar />
       <div className={styles.container}>
         <QuizStats data={quizStatsData} />
+        {items.length === 0 && (
+          <div className={styles.loading}>
+            <p>Loading...</p>
+          </div>
+        )}
         <TrendingQuiz items={items} />
       </div>
     </>

@@ -26,6 +26,8 @@ export default function Analytics({ data }) {
     }
   }, [data]);
 
+  if (items.length === 0) return <div className={styles.loading}>Loading...</div>;
+
   const handleDelete = (id) => {
     setSelectedItemId(id);
     setShowModal(true);

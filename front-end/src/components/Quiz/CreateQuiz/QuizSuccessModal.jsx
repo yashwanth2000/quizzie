@@ -48,7 +48,7 @@ export default function QuizSuccessModal({ onClose, code, quizType }) {
           onClick={handleClose}
         />
         <h3>Congrats your Quiz is Published!</h3>
-        <p>Your link is here</p>
+        <p>{quizUrl}</p>
         <button className={styles.shareButton} onClick={handleCopy}>
           {copied ? "Copied!" : "Share"}
         </button>

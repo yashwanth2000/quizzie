@@ -8,3 +8,12 @@
   padding-left: 12.25rem;
   overflow: auto;
 }
+
+.loading {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+}

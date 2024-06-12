@@ -73,6 +73,15 @@
   cursor: pointer;
 }
 
+.loading {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .analysis {
   font-family: "Poppins";
   font-size: 1rem;
