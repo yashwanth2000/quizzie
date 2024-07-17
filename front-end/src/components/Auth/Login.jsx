@@ -1,12 +1,11 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../utils/AuthContext";
+import { login } from "../../utils/auth";
 import { toast, Zoom, ToastContainer } from "react-toastify";
 
 export default function Login() {
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     email: "",
     password: "",

@@ -107,6 +107,8 @@ const updateQuizAnalytics = async (quizCode, analytics) => {
     if (data.success === false) {
       throw new Error(data.message);
     }
+
+    return data;
   } catch (error) {
     console.error(error);
     throw error;

@@ -1,12 +1,11 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import styles from "./Register.module.css";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../utils/AuthContext";
+import { register } from "../../utils/auth";
 import { toast, Zoom, ToastContainer } from "react-toastify";
 
 export default function Register() {
   const navigate = useNavigate();
-  const { register } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     name: "",
     email: "",

@@ -1,20 +1,8 @@
-import { useContext } from "react";
-import { Navigate } from "react-router-dom";
-import { AuthContext } from "./AuthContext";
-import PropTypes from "prop-types";
+import { Outlet, Navigate } from "react-router-dom";
 
-const PrivateRoute = ({ children }) => {
-  const { isLoggedIn } = useContext(AuthContext);
-
-  if (!isLoggedIn) {
-    return <Navigate to="/login" />;
-  }
-
-  return children;
-};
-
-PrivateRoute.propTypes = {
-  children: PropTypes.node.isRequired,
+const PrivateRoute = () => {
+  const isAuthenticated = !!localStorage.getItem("access_token");
+  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default PrivateRoute;

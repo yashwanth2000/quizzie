@@ -166,18 +166,20 @@ const updateQuizAnalytics = async (req, res, next) => {
       return next(errorHandler(404, "Quiz not found"));
     }
 
-    const { questionIndex, isCorrect } = req.body;
+    const { questionIndex, isCorrect, impressions } = req.body;
 
-    if (questionIndex === undefined || isCorrect === undefined) {
-      return next(errorHandler(400, "questionIndex and isCorrect are required"));
-    }
+    let update = {};
 
-    const update = {
-      $inc: {
+    if (impressions !== undefined) {
+      update.$inc = { 'analytics.impressions': 1 };
+    } else if (questionIndex !== undefined && isCorrect !== undefined) {
+      update.$inc = {
         [`questions.${questionIndex}.totalAttempts`]: 1,
         [`questions.${questionIndex}.${isCorrect ? 'totalCorrect' : 'totalIncorrect'}`]: 1,
-      },
-    };
+      };
+    } else {
+      return next(errorHandler(400, "Invalid analytics data"));
+    }
 
     const updatedQuiz = await Quiz.findOneAndUpdate({ quizCode }, update, {
       new: true,
