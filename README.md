@@ -51,3 +51,20 @@ cd quizzie
 - View quiz analytics to gain insights into quizzes created on the platform.
 - Share quizzes with other users, attend quizzes, and receive results based on performance.
 - To attend a quiz, click on "Share Icon" on the analytics page to copy the quiz link to your clipboard, then share or attend the quiz.
+
+# Login and Register
+![Login and Register](img/auth.jpg)
+
+# DashBoard Page
+![DashBoard](img/dashboard.png)
+
+# Analytics Page
+![Analytics](img/analytics.png)
+
+# Create Quiz Page
+![Create Quiz](img/quiz-creation.png)
+
+# Quiz Analysis
+![Quiz Analysis](img/quiz-question-analytics.png)
+
+
