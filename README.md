@@ -1,7 +1,7 @@
 # Quizzie
 
 Quizzie is a quiz management application designed to help users to create quizzes and share quiz efficiently, built using the MERN (MongoDB, Express.js, React, Node.js) stack. 
-Users can create, edit, update, delete, and share quizzes to others. The app also includes features for quiz management, quiz sharing, analytics.
+Users can create, update, delete, and share quizzes to others. The app also includes features for quiz management, quiz sharing, analytics.
 
 # Features
 1. **User Authentication**
